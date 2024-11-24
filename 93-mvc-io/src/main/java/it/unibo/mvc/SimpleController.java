@@ -40,7 +40,6 @@ public final class SimpleController implements Controller {
             throw new IllegalArgumentException();
         }
         this.currentString = newString;
-        this.history.add(newString);
     }
 
     /**
@@ -70,6 +69,7 @@ public final class SimpleController implements Controller {
         }
         System.out.println(getCurrentString()); //NOPMD: the exercise 
         //requires the usage of sout
+        this.history.add(this.currentString);
     }
 
 }
